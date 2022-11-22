@@ -1,0 +1,2 @@
+docker build -t novnc/websockify .
+docker run --name websockify -d --network host -v "C:\Users\ivank\Desktop\1ek\PROJECTS\DOCKER\config":/data novnc/websockify --verbose --token-plugin=TokenFile --token-source=/data/token_file.cfg 6080
