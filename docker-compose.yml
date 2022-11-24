@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  websockify:
+    build: ./websockify-master/docker
+    ports:
+      - 6800:6800
+    volumes: 
+      - /home/vanek/main/remote/backend/config:/data
+  buttonproxy:
+    build: ./button_proxy
+    ports: 
+      - 8080:8080
+    volumes: 
+      - /home/vanek/main/remote/backend/config:/app/config
