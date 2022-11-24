@@ -17,6 +17,7 @@ EXPOSE 6080
 WORKDIR /opt/websockify
 
 COPY docker-entrypoint.sh /
+RUN chmod +x /docker-entrypoint.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["--help"]
