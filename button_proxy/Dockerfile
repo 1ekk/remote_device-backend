@@ -6,9 +6,9 @@ COPY package*.json ./
 
 RUN npm install
 
-RUN mkdir /app/config
+RUN mkdir /config
 
-VOLUME /app/config
+VOLUME /config
 
 COPY . .
 

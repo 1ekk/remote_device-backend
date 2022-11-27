@@ -3,12 +3,22 @@ services:
   websockify:
     build: ./websockify-master/docker
     ports:
-      - 6800:6800
+      - "6800:6800"
     volumes: 
-      - /home/vanek/main/remote/backend/config:/data
+      - /home/vanek/remote/backend/config:/data
   buttonproxy:
     build: ./button_proxy
     ports: 
-      - 8080:8080
+      - "8080:8080"
     volumes: 
-      - /home/vanek/main/remote/backend/config:/app/config
+      - /home/vanek/remote/backend/config:/config
+  db:
+    image: postgres:15.1-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=admin
+    volumes:
+      - ./db/pgdata:/var/lib/postgresql/data
+
