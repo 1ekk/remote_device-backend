@@ -26,6 +26,6 @@ services:
     ports:
       - "5173:5173"
     volumes: 
-      - /home/vanek/remote/frontend:/app
+      - /home/vanek/remote/frontend:/app/src
 
 
