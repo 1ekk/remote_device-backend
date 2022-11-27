@@ -19,6 +19,7 @@ services:
     environment:
       - POSTGRES_PASSWORD=root
       - POSTGRES_USER=admin
+      - POSTGRES_DB=remote
     volumes:
       - ./db/pgdata:/var/lib/postgresql/data
   # front: 
