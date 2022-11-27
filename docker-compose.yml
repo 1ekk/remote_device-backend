@@ -24,7 +24,7 @@ services:
   front: 
     build: ../frontend
     ports:
-      - "80:80"
+      - "5173:5173"
     volumes: 
       - /home/vanek/remote/frontend:/app
 
