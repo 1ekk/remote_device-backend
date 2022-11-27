@@ -23,6 +23,11 @@ app.get('/api/device/:dev_id/button/:btn_id', (req, res) => {
 
 const port = process.env.PORT || 8080
 
-app.listen(port, () => {console.log(`LISTENING ON PORT ${port}`)})
+app.listen(port, () => {
+    console.log(`LISTENING ON PORT ${port}`)
+    DEVICES.forEach(device => {
+        console.log(`DEVICE ${device.id}: ${device.ip}`)
+    })
+})
 
 
