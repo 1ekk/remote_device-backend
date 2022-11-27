@@ -21,11 +21,11 @@ services:
       - POSTGRES_USER=admin
     volumes:
       - ./db/pgdata:/var/lib/postgresql/data
-  front: 
-    build: ../frontend
-    ports:
-      - "5173:5173"
-    volumes: 
-      - /home/vanek/remote/frontend:/app
+  # front: 
+  #   build: ../frontend
+  #   ports:
+  #     - "5173:5173"
+  #   volumes: 
+  #     - /home/vanek/remote/frontend:/app
 
 
